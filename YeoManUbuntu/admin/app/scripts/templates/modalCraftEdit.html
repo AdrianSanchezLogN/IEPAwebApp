@@ -1,0 +1,73 @@
+<!-- Modal -->
+<%var modalId = _id+'myModalEdit', modalName = _id+'_modalnameEdit' , modalLastname = _id+'_modallastnameEdit', modalDesc= _id+'_modaldescEdit', modalEmail= _id+'_modalemailEdit', modalSelec= _id+'_select_imageEdit',modalImg= _id+'_img_modalEdit',modalLabel= _id+'_modalimgEdit', modalForm= _id+'_buttonFile',modalSelect= _id+'_selectEdit', modalClose= _id+'_closeModal';%>
+<div class="modal fade" id=<%= modalId %> tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id=<%=modalClose%> >&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Editando el artesano <%= _id %></h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Nombre</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <input type="text" class="modalnameEdit" value="<%=name%>" id=<%=modalName%>  maxlength="30"> </input>
+          </div>
+        </div> 
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Apellidos</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <input type="text" class="modallastnameEdit" value="<%=lastname%>" id=<%=modalLastname%>  maxlength="30"> </input>
+          </div>
+        </div> 
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Email</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <input type="text" class="modalemailEdit" value="<%=email%>" id=<%=modalEmail%>  maxlength="30"> </input>
+          </div>
+        </div>
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Comunidad</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <form action="">
+              <select name="community" id=<%=modalSelect%> >
+                <% _.each(communities.models, function(i) {;%>   
+                  <option value=<%=i.attributes._id%> <%if(i.attributes._id == community){ %>selected<%;}%>><%=i.attributes.name%></option>    
+                <% }); %>
+              </select>
+            </form>
+          </div>
+        </div>
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Descripción</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <textarea rows="2" cols="50" class="modaldescEdit" id=<%= modalDesc %>> <%=description%> </textarea>
+          </div>
+        </div> 
+        <label>Imagen</label>
+        </br>
+        <form class=<%= modalForm %>
+          enctype="multipart/form-data"
+          method="post">
+          <input class="select_imageEdit" type="file" name="image" accept="image/*" id= <%= modalSelec %>>
+        </form>
+        <img class="img_modalEdit" alt="image preview" id= <%= modalImg %> src=<%=image[0]%> onerror="this.src='http://localhost:9000/admin/images%2Flogorojo2.jpg'"/>
+        <textarea type="text" class="modalimgEdit hidden" id= <%= modalLabel %>><%=decodeURIComponent(image)%></textarea>
+        </br>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default closeModal" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary editModalCraft" value=<%= _id %> id=<%= modalForm %>>Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>

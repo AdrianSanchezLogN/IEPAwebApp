@@ -1,0 +1,50 @@
+<div class="col-sm-9 padding-right">
+	<div class="features_items"><!--features_items-->
+		<h2 class="title text-center"><%=Category.name%></h2>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="product-image-wrapper">
+					<img class="categoy-image"src=<%='http://localhost:9000/admin/'+Category.image%> onerror="this.src='http://localhost:9000/admin/images%2Flogorojo2.jpg'" alt="" />
+				</div>
+			</div>
+			<div class="col-sm-6">				
+				<h3>Descripción: <h4><%=Category.description%></h4></h3>
+			</div>
+		</div>
+		<h2 class="title text-center">Productos Relacionados</h2>
+		<%_.each(models, function(i) {%> 
+					<h2><%=i.attributes.title%></h2> 
+			<div class="col-sm-4">
+				<div class="product-image-wrapper">
+					<div class="single-products">
+							<div class="productinfo text-center">
+								<img src=<%='http://localhost:9000/admin/'+i.attributes.image[0]%> onerror="this.src='http://localhost:9000/admin/images%2Flogorojo2.jpg'" alt="" />
+								<h2>$<%=i.attributes.price%></h2>
+								<p><%=i.attributes.name%></p>
+								<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+							</div>
+							<div class="product-overlay">
+								<div class="overlay-content">
+									<li class="glyphicon glyphicon-info-sign glyphicon_products" value=<%=i.attributes._id%> data-toggle="tooltip" data-placement="right" title="" data-original-title="Ver Más..."></li>
+									</br>
+									<p><%=i.attributes.description%></p>
+									<h2>$<%=i.attributes.price%></h2>
+									<p><%=i.attributes.name%></p>
+									<li  class="btn btn-default add-to-cart" value=<%=i.attributes._id%>><i class="fa fa-shopping-cart"></i>Add to cart</li>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		<% }); %>
+	</div><!--features_items-->
+</div>
+
+<script type="text/javascript">
+  // When the document is ready
+  $(document).ready(function () {
+      
+      $('.glyphicon-info-sign').tooltip({placement: 'top'});
+  
+  });
+</script>

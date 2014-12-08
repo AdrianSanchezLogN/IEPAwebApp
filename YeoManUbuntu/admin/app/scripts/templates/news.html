@@ -1,0 +1,57 @@
+<div id="news_div">       
+    <div class="row">
+    	<div class="col-md-1 grid-md-1"> 
+            <strong>ID</strong>
+            </br>
+            </br> 
+    		<%=_id%>
+    	</div>
+    	<div class="col-md-2 grid-md-2">
+            <strong>Título</strong>
+            </br>
+            </br> 
+    		<p><%=title%></p>
+    	</div>
+        <div class="col-md-4 grid-md-4">
+            <strong>Texto</strong>
+            </br>
+            </br> 
+            <p><%=text%></p>
+        </div>
+        <div class="col-md-4 grid-md-4"> 
+            <strong>Imagen</strong>
+            </br>  
+            </br>   
+            <% _.each(image, function(i) {%>    
+                <img class="prev_img" src=<%=i%> alt="image preview" onerror="this.src='http://localhost:9000/admin/images%2Flogorojo2.jpg'" value=<%=_id%> data-toggle="modal" <%var modalImage = '#'+_id+'myModalImage';%> data-target=<%=modalImage%> />
+            <% }); %>
+        </div>
+        <div class="col-md-7 grid-md-7">
+            <strong>Link</strong>
+            </br>
+            </br> 
+            <a href=<%=decodeURIComponent(link)%> target="_blank"><%=decodeURIComponent(link)%></a>
+        </div>
+    	<div class="col-md-2 grid-md-2">
+            <strong>Editar</strong>
+            </br>
+            </br> 
+            <span type="button" class="edit" value=<%=_id%> data-toggle="modal" <%var modalId = '#'+_id+'myModalEdit';%> data-target=<%=modalId%>><a class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="right" title="" data-original-title="Editar"></a> </span>
+    	</div>
+    	<div class="col-md-2 grid-md-2">
+            <strong>Eliminar</strong>
+            </br>
+            </br> 
+            <li type="button" class="delete" value=<%=_id%>><a class="glyphicon glyphicon-remove" data-toggle="tooltip" data-placement="right" title="" data-original-title="Eliminar"></a></li>
+    	</div>			
+	  </div><!--/row-->  
+</div>
+<script type="text/javascript">
+  // When the document is ready
+  $(document).ready(function () {
+      
+      $('.glyphicon-pencil').tooltip({placement: 'right'});
+      $('.glyphicon-remove').tooltip({placement: 'right'});
+  
+  });
+</script>

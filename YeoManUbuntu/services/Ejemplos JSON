@@ -1,0 +1,20 @@
+Ejemplos JSON
+
+Registrar Usuario
+{
+  "_id":1, 
+  "name":"Adrián Sánchez", 
+  "password":"adsanchez", 
+  "email":"email@gmail.com", 
+  "physicalAddress":"San Diego, Cartago", 
+  "birthday":"1991 12 1", 
+  "country":"C.R.", 
+  "recentCategories":[], 
+  "sessionValue": ""
+}
+
+Actualizar Usuario
+{
+  "physicalAddress":"San Diego, Cartago, CR"
+}
+

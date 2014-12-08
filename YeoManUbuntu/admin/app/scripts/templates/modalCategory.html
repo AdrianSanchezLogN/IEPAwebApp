@@ -1,0 +1,46 @@
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closeModal">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Crear Categoría</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">
+            <label>Nombre</label>
+            <label class="must_sign">*</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <input type="text" class="modalname" maxlength="30"></input>
+          </div>
+        </div> 
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Descripción</label>
+            <label class="must_sign">*</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <textarea rows="2" cols="50" class="modaldesc" maxlength="50"></textarea>
+          </div>
+        </div> 
+        <label>Imagen</label>
+        </br>
+        <form class="buttonFile"
+          enctype="multipart/form-data"
+          method="post">
+          <input class="select_image" type="file" name="image" accept="image/*">
+        </form>
+        <img class="img_modal hidden" alt="image preview" />
+        <textarea type="text" class="modalimg hidden"></textarea>
+        </br>
+      <label class="must_sign">* Campos Requerídos</label> 
+      <div class="modal-footer">        
+        <label id="modalerrorInvalid" class= "hidden alert alert-danger errorMsg">Datos Invalidos, favor revisar la información ingresada</label> 
+        <button type="button" class="btn btn-default closeModal" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary saveModal" id="buttonFile">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>

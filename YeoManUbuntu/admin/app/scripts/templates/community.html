@@ -1,0 +1,37 @@
+<div id="comm_div">       
+    <div class="row">
+    	<div class="col-md-2 grid-md-2"> 
+            <strong>ID</strong>
+            </br>
+            </br> 
+    		<%=_id%>
+    	</div>
+    	<div class="col-md-3 grid-md-3">
+            <strong>Nombre</strong>
+            </br>
+            </br> 
+    		<p><%=name%></p>
+    	</div>
+    	<div class="col-md-3 grid-md-3">
+            <strong>Editar</strong>
+            </br>
+            </br>     		
+            <span type="button" class="edit" value=<%=_id%> data-toggle="modal" <%var modalId = '#'+_id+'myModalEdit';%> data-target=<%=modalId%>><a class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="right" title="" data-original-title="Editar"></a> </span>
+    	</div>
+    	<div class="col-md-3 grid-md-3">
+            <strong>Eliminar</strong>
+            </br>
+            </br> 
+            <li type="button" class="delete" value=<%=_id%>><a class="glyphicon glyphicon-remove" data-toggle="tooltip" data-placement="right" title="" data-original-title="Eliminar"></a></li>
+    	</div>			
+	  </div><!--/row-->  
+</div>
+<script type="text/javascript">
+  // When the document is ready
+  $(document).ready(function () {
+      
+      $('.glyphicon-pencil').tooltip({placement: 'right'});
+      $('.glyphicon-remove').tooltip({placement: 'right'});
+  
+  });
+</script>

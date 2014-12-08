@@ -1,0 +1,9 @@
+{
+  'page': 'Page',
+  'time': 'Time',
+  'files_label': 'Files',
+  'num_files': 'There are ${num} files in this folder',
+  'cat_title': 'Selected Category: ',
+  'description': 'Description: ',
+  'cat_id': 'The ID of the selected category is ${id}'
+}

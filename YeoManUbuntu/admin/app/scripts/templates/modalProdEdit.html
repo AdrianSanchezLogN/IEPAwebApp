@@ -1,0 +1,100 @@
+<!-- Modal -->
+<%var modalId = _id+'myModalEdit', modalName = _id+'_modalnameEdit', modalDesc= _id+'_modaldescEdit', modalPrice = _id+'_modalpriceEdit', modalQuant= _id+'_modalquantEdit',modalPriceMsg = _id+'_modalpriceMsgEdit', modalQuantMsg= _id+'_modalquantMsgEdit',modalKey= _id+'_modalkeyEdit', modalForm= _id+'_buttonFile',modalSelect= _id+'_selectEdit', modalClose= _id+'_closeModal';%>
+<div class="modal fade" id=<%= modalId %> tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id=<%=modalClose%> >&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Editando el producto <%= _id %></h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Nombre</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <input type="text" class="modalnameEdit" value="<%=name%>" id=<%=modalName%>  maxlength="30"> </input> 
+          </div>
+        </div> 
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Descripción</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <textarea rows="2" cols="50" class="modaldescEdit" id=<%= modalDesc %> maxlength="50"><%=description%></textarea> 
+          </div>
+        </div>
+         
+        <div class="row">        
+          <div class="col-xs-4 col-sm-4">
+            <label>Categorías</label>
+            </br>
+            <div style="width:130px;height:100px;overflow:auto;background-color: #C1D6E8;">
+              <form action="modal_form_cate">
+                <% _.each(categoriesCollection.models, function(i) {%>
+                    <input type="checkbox" class=<%=_id%> name="cate" value=<%=i.attributes._id%> <%if(category.indexOf(i.attributes._id)!= -1){%>checked<%}%>> <%=i.attributes.name%><br>
+                <%}); %>   
+              </form>
+            </div>  
+          </div><!--/span-->
+          <div class="col-xs-4 col-sm-4">
+            <label>Artesanos</label>
+            </br>
+            <div style="width:130px;height:100px;overflow:auto;background-color: #C1D6E8;">
+              <form action="modal_form_craf">
+                <% _.each(craftsmanCollection.models, function(i) {%>  
+                    <input type="checkbox" class=<%=_id%> name="craf" value=<%=i.attributes._id%> <%if(craftsman.indexOf(i.attributes._id)!= -1){%>checked<%}%>><%=i.attributes.name%><br>
+                <%}); %> 
+              </form>
+            </div> 
+          </div><!--/span-->
+          <div class="col-xs-3 col-sm-3">
+            <label>Materiales</label>
+            </br>
+            <div style="width:130px;height:100px;overflow:auto;background-color: #C1D6E8;">
+              <form action="modal_form_mate">
+                <% _.each(materialCollection.models, function(i) {%>  
+                    <input type="checkbox" class=<%=_id%> name="mate" value=<%=i.attributes._id%> <%if(material.indexOf(i.attributes._id)!= -1){%>checked<%}%>> <%=i.attributes.name%><br>
+                <%}); %> 
+              </form>
+            </div> 
+          </div><!--/span-->
+        </div><!--/span-->  
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Palabras Clave</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <textarea rows="2" cols="50" class="modalkeyEdit" id=<%= modalKey %> maxlength="50"><% _.each(keyword, function(i) {%><%=i%> <%});%></textarea>  
+          </div>
+        </div> 
+        <div id="numbers">
+          <div class="row">       
+            <div class="col-xs-3 col-sm-3">            
+              <label>Precio</label>
+            </div> 
+            <div class="col-xs-5 col-sm-5">
+              <input type="text" class=<%=modalPriceMsg%>  id=<%=modalPrice%> maxlength="5" value=<%=price%> > </input> 
+            </div>
+            <div class="col-xs-2 col-sm-2">
+              <p>Dólares</p>
+            </div>
+          </div> 
+          <label id=<%=modalPriceMsg%>  class= "hidden alert alert-danger errorMsg">Éste campo solo puede contener números</label>
+          <div class="row">       
+            <div class="col-xs-3 col-sm-3">            
+              <label>Cantidad en el almacén</label>
+            </div> 
+            <div class="col-xs-4 col-sm-4">
+              <input type="text" class=<%=modalQuantMsg%>  id=<%=modalQuant%> maxlength="4" value=<%=quantity%>></input> 
+            </div>
+          </div> 
+          <label id=<%=modalQuantMsg%>  class= "hidden alert alert-danger errorMsg">Éste campo solo puede contener números</label>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default closeModal" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary editModalProd" value=<%= _id %> id=<%= modalForm %>>Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>

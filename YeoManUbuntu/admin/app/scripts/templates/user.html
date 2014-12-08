@@ -1,0 +1,106 @@
+<div id="user_div">       
+    <div class="row">
+    	<div class="col-md-2 grid-md-2"> 
+            <strong>ID</strong>
+            </br>
+            </br> 
+    		<%=_id%>
+    	</div>
+    	<div class="col-md-2 grid-md-2">
+            <strong>Nombre</strong>
+            </br>
+            </br> 
+    		<p><%=name%></p>
+    	</div> 
+        <div class="col-md-3 grid-md-3">
+            <strong>Apellidos</strong>
+            </br>
+            </br> 
+            <p><%=lastname%></p>
+        </div> 
+        <div class="col-md-3 grid-md-3"> 
+            <strong>Fecha de Nacimiento</strong>
+            </br>  
+            </br>   
+            <p><%=birthday%></p>
+        </div>       
+        <div class="col-md-2 grid-md-2">
+            <strong>País</strong>
+            </br>
+            </br> 
+            <p><%=country%></p>
+        </div>
+        <div class="col-md-2 grid-md-2"> 
+            <strong>Dirección Física</strong>
+            </br>  
+            </br>  
+            <p><%=physicalAddress%></p>
+        </div>
+        <div class="col-md-2 grid-md-2" style="text-align: center;"> 
+            <strong style="float: left;">Administrador</strong>
+            </br>  
+            </br>  
+            <input type="checkbox" class="check_static" value=<%=admin%> <%if(admin == 1){%>checked<%}%>>
+        </div>
+        <div class="col-md-2 grid-md-2"> 
+            <strong>Categorías Recientes</strong>
+            </br>  
+            </br>   
+            <% _.each(recentCategories, function(i) {%>  
+                <% _.each(categoriesCollection.models, function(e) {;%>   
+                    <%if(i == e.attributes._id){ %>
+                        <p><%=e.attributes.name%><p/>
+                    <%} }); %>                  
+            <% }); %>
+        </div>
+        <div class="col-md-3 grid-md-3"> 
+            <strong>Fecha de Registro</strong>
+            </br>  
+            </br>  
+            <p>Fecha: &nbsp;<%=registrationDate.split('T')[0]%><p/>
+            <p>Hora: &nbsp; <%=registrationDate.split('T')[1].split('.')[0]%><p/>
+        </div>
+        <div class="col-md-3 grid-md-3"> 
+            <strong>Fecha de Última Acción</strong>
+            </br>  
+            </br>              
+            <p>Fecha: &nbsp;<%=sessionDate.split('T')[0]%><p/>
+            <p>Hora: &nbsp; <%=sessionDate.split('T')[1].split('.')[0]%><p/>
+        </div>
+        <div class="col-md-4 grid-md-4"> 
+            <strong>Fecha de Último Logueo</strong>
+            </br>  
+            </br>  
+            <p>Fecha: &nbsp;<%=sessionLogIn.split('T')[0]%><p/>
+            <p>Hora: &nbsp; <%=sessionLogIn.split('T')[1].split('.')[0]%><p/>
+        </div>
+        <div class="col-md-4 grid-md-4"> 
+            <strong>Fecha de Último DesLogueo</strong>
+            </br>  
+            </br>  
+            <p>Fecha: &nbsp;<%=sessionLogOut.split('T')[0]%><p/>
+            <p>Hora: &nbsp; <%=sessionLogOut.split('T')[1].split('.')[0]%><p/>
+        </div>
+    	<div class="col-md-2 grid-md-2">
+            <strong>Editar</strong>
+            </br>
+            </br>             
+            <span type="button" class="edit" value=<%=_id%> data-toggle="modal" <%var modalId = '#'+_id+'myModalEdit';%> data-target=<%=modalId%>><a class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="right" title="" data-original-title="Editar"></a> </span>
+    	</div>
+    	<div class="col-md-2 grid-md-2">
+            <strong>Eliminar</strong>
+            </br>
+            </br>             
+            <li type="button" class="delete" value=<%=_id%>><a class="glyphicon glyphicon-remove" data-toggle="tooltip" data-placement="right" title="" data-original-title="Eliminar"></a></li>
+    	</div>			
+	  </div><!--/row-->  
+</div>
+<script type="text/javascript">
+  // When the document is ready
+  $(document).ready(function () {
+      
+      $('.glyphicon-pencil').tooltip({placement: 'right'});
+      $('.glyphicon-remove').tooltip({placement: 'right'});
+  
+  });
+</script>

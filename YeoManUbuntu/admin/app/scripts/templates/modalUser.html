@@ -1,0 +1,111 @@
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closeModal">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Crear Usuario</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Nombre</label>
+            <label class="must_sign">*</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <input type="text" class="modalname" maxlength="30"></input> 
+          </div>
+        </div>  
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Apellidos</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <input type="text" class="modallastname" maxlength="30"></input> 
+          </div>
+        </div>  
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Contraseña</label>
+            <label class="must_sign">*</label>
+          </div> 
+          <div class="col-xs-6 col-sm-6">
+            <input type="password" class="modalpass1" value=""  maxlength="30"></input>
+          </div>
+          <div class="col-xs-2 col-sm-2">
+            <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Debe poseer al menos ocho caracteres, incluyendo una mayúscula, minúscula, caracteres especiales y número"></span>
+          </div>
+        </div>          
+        <label id="modalerrorRegexPass" class= "hidden alert alert-danger errorMsg">La Contraseña No es Válida</label> 
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Comprobar <label class="must_sign">*</label> Contraseña</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <input type="password" class="modalpass2" value="" maxlength="30"></input> 
+          </div>
+        </div>             
+        <label id="modalerrorPass" class= "hidden alert alert-danger errorMsg">Las Contraseñas No Coinciden</label> 
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Email</label>
+            <label class="must_sign">*</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <input type="text" class="modalemailUser" maxlength="30"></input> 
+          </div>
+        </div> 
+        <label id="modalerrorEmail" class= "hidden alert alert-danger errorMsg">Email Ya Utilizado</label> 
+        <label id="modalgoodEmail" class= "hidden alert alert-success errorMsg">Email Aceptado</label>         
+        <label id="modalerrorRegexEmail" class= "hidden alert alert-danger errorMsg">El Correo No es Válido</label> 
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>País</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <input type="text" class="modalcountry" maxlength="30"></input> 
+          </div>
+        </div> 
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">           
+            <label>Dirección Física</label> 
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <textarea rows="2" cols="50" class="modaldire" maxlength="80"></textarea> 
+          </div>
+        </div> 
+        <div class="row">           
+          <div class="col-xs-6 col-sm-6">
+            <label>Fecha de Nacimiento</label>
+            <label class="must_sign">*</label>
+            </br>
+            <div class="hero-unit">
+              <input  type="text" placeholder="Seleccione una fecha"  class="modalbirth" id="modalbirth"  maxlength="10">
+            </div>
+          </div>
+          <div class="col-xs-4 col-sm-4" style="text-align: center;">
+            <label>Administrador</label>
+            </br> 
+            <input type="checkbox" class="modaladmin">
+          </div>
+        </div>
+        <label class="must_sign">* Campos Requerídos</label>
+      <div class="modal-footer">        
+        <label id="modalerrorInvalid" class= "hidden alert alert-danger errorMsg">Datos Invalidos, favor revisar la información ingresada</label> 
+        <button type="button" class="btn btn-default closeModal" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary saveModal" id="buttonFile">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  // When the document is ready
+  $(document).ready(function () {
+      
+      $('#modalbirth').datepicker({
+          format: "yyyy/mm/dd"
+      }); 
+      $('.glyphicon-question-sign').tooltip({placement: 'bottom'});
+  
+  });
+</script>

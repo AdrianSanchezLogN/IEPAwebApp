@@ -1,0 +1,46 @@
+<section id="slider"><!--slider-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						
+						<div class="carousel-inner">
+							<% var num = 1;
+							_.each(models, function(i) {
+								if(num == 1){%>  
+								<div class="item active">
+								<% num = 0;}
+									else if(num == 0){%>
+									<div class="item">
+								<% }%> 
+									<div class="col-sm-6">
+										<h1>IEPA</h1>
+										<h2><%=i.attributes.title%></h2>
+										<p><%=i.attributes.text%></p>
+										<a class="btn btn-default get" target="_blank" href=<%=decodeURIComponent(i.attributes.link)%> >Ir a la Noticia</a>
+									</div>
+									<div class="col-sm-6">
+										<img src=<%='http://localhost:9000/admin/'+i.attributes.image%> onerror="this.src='http://localhost:9000/admin/images%2Flogorojo2.jpg'" class="img-responsive" alt="" />
+									</div>
+								</div>
+							<% }); %>
+						</div>
+						
+						<a href="#slider-carousel" class="left control-carousel" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a href="#slider-carousel" class="right control-carousel" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section><!--/slider-->
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function(){
+  $("area[rel^='prettyPhoto']").prettyPhoto();
+});
+</script>

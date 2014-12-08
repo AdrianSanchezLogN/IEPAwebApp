@@ -1,0 +1,18 @@
+<div id="pager_links">       
+  <ul class="pager">
+    <%if (prev>0){ %> 
+      <li><a class="pagerButton" value=<%=prev%>>Anterior</a></li>
+    <% } %>
+    <%for (i = 1; i < pages+1; i++) { %>
+      <%if (i==prev+1){ %>   
+        <li ><a style="background-color: #ddd; color: black;" value=<%=i%>><%=i%></a></li>
+      <% } 
+      else {%>   
+        <li><a class="pagerButton" value=<%=i%>><%=i%></a></li>
+      <% } %>
+    <% } %>
+    <%if (prev+2<pages+1){ %> 
+      <li><a class="pagerButton" value=<%=(prev+2)%>>Siguiente</a></li>
+    <% } %>
+  </ul>
+</div>

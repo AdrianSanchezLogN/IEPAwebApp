@@ -1,0 +1,77 @@
+<!-- Modal -->
+<%var modalId = _id+'myModalEdit', modalName = _id+'_modalnameEdit', modalLastname = _id+'_modallastnameEdit', modalCount= _id+'_modalcountEdit', modalDire= _id+'_modaldireEdit', modalBirth= _id+'_modalbirthEdit', modalAdmin= _id+'_modaladminEdit', modalErrorForm= _id+'_modalerrorInvalid',modalClose= _id+'_closeModal';%>
+<div class="modal fade" id=<%= modalId %> tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id=<%=modalClose%> >&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Editando el usuario <%= _id %></h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Nombre</label>
+            <label class="must_sign">*</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <input type="text" class="modalnameEdit" value="<%=name%>" id=<%=modalName%>  maxlength="30"> </input>
+          </div>
+        </div> 
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Apellidos</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <input type="text" class="modallastnameEdit" value="<%=lastname%>" id=<%=modalLastname%>  maxlength="30"> </input>
+          </div>
+        </div> 
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>País</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <input type="text" class="modalcountryEdit" id=<%=modalCount%> value="<%=country%>"  maxlength="30"></input> 
+          </div>
+        </div> 
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">            
+            <label>Dirección Física</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <textarea rows="2" cols="50" class="modaldireEdit" id=<%= modalDire %> maxlength="80"><%=physicalAddress%></textarea>
+          </div>
+        </div>  
+        <div class="row">           
+          <div class="col-xs-6 col-sm-6">
+            <label>Fecha de Nacimiento</label>
+            <label class="must_sign">*</label>
+            </br>
+            <div class="hero-unit">
+              <input  type="text" placeholder="Seleccione una fecha"  class="modalbirth" id=<%= modalBirth %> value=<%= birthday %> maxlength="10"></input>
+            </div>
+          </div>
+          <div class="col-xs-4 col-sm-4" style="text-align: center;">
+            <label>Administrador</label>
+            </br> 
+            <input type="checkbox" class="modaladmin" id=<%= modalAdmin %> <%if(admin == 1){%>checked<%}%>>
+          </div>
+        </div>
+      <label class="must_sign">* Campos Requerídos</label> 
+      <div class="modal-footer">        
+        <label id=<%= modalErrorForm %> class= "hidden alert alert-danger errorMsg">Datos Invalidos, favor revisar la información ingresada</label> 
+        <button type="button" class="btn btn-default closeModal" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary editModalUser" value=<%= _id %>>Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  // When the document is ready
+  $(document).ready(function () {
+      
+      $('.modalbirth').datepicker({
+          format: "yyyy/mm/dd"
+      }); 
+  
+  });
+</script>

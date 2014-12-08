@@ -1,0 +1,77 @@
+<div class="row">
+  <div class="col-md-8"> 
+    <h3> Herramienta de Administración </h3>
+    </br>
+    </br>
+    <label> Correo </label>
+    </br>
+    <input type="text" id="email" value="" maxlength="30">
+    </br>
+    </br>
+    <label> Contraseña </label>
+    </br>
+    <input type="password" id="pass" value="" maxlength="30">
+    </br>
+    </br>
+    <button class="login_button">Acceder</button>
+    </br>
+    </br>
+    <label id="errorLogin" class= "hidden alert alert-danger errorMsg3">Correo o Contraseña Incorrecta</label>     
+    <label id="autoLogout" class= "hidden alert alert-danger errorMsg3">El tiempo sin actividad ha expirado</label> 
+    <p class="forget" style="font-size:13px;" data-toggle="modal" data-target="#myModal">¿Se le olvidó la contraseña?</p>
+    </br>
+    <label id="msgForget" class= "hidden alert alert-success errorMsg3">Contraseña enviada satisfactoriamente al correo</label> 
+    <label id="modalerrorFound" class= "hidden alert alert-warning errorMsg3">El Correo es Inválido</label> 
+  </div>
+  <div class="col-md-2"> 
+    </br>
+    <label class="user_help" data-toggle="modal" data-target="#helpModal">Ayuda</label>
+    <span class="glyphicon glyphicon-question-sign user_help" data-toggle="modal" data-target="#helpModal"></span>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closeModal">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Reenviar Contraseña</h4>
+      </div>
+      <div class="modal-body">
+        <label>Email</label>
+        </br>
+        <input type="text" id="modalemailLogin"  maxlength="30"></input> 
+        <label id="modalerrorRegexEmail" class= "hidden alert alert-danger errorMsg">El Correo No es Válido</label> 
+      </div>
+      <div class="modal-footer">        
+        <label id="modalerrorInvalid" class= "hidden alert alert-danger errorMsg">Datos Invalidos, favor revisar la información ingresada</label> 
+        <button type="button" class="btn btn-default closeModal" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary acceptModal">Solicitar Contraseña</button>
+      </div>
+    </div>
+  </div>
+</div>  
+
+<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="text-align: center;">
+    <div>
+      <span class="img_modalImage img_manualImage_Login_1" id="img_manualLogin"/>
+      </br>
+    </div>
+    <div class="manual-background">      
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closeModal">&times;</button>
+      </br>    
+      <label class="help-text">Bienvenido al Administrador de Contenido. Lo primero que debe realizar es iniciar sesión.</label>
+      </br>
+      <ul>
+      <li class="help-button 1 current-help button-first" value=1>1</li>
+      <li class="help-button 2" value=2>2</li>
+      <li class="help-button 3" value=3>3</li>
+      <li class="help-button 4" value=4>4</li>
+      <li class="help-button 5" value=5>5</li>
+      <li class="help-button 6" value=6>6</li>
+      <li class="help-button 7" value=7>7</li>
+      </ul>
+    </div>
+  </div>
+</div>  

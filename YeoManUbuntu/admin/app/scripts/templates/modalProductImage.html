@@ -1,0 +1,14 @@
+<!-- Modal -->
+<%var modalId = decodeURIComponent(image).split('/')[1].split('.')[0].replace(' ','').replace(' ','')+'_myModalImage', modalImg= image+'_img_modal', modalClose= image+'_closeModal';%>
+<div class="modal fade" id="<%=modalId%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-image">
+    <img class="img_modalImage" alt="image preview" id= <%=modalImg%> onerror="this.src='http://localhost:9000/admin/images%2Flogorojo2.jpg'" src=<%=image%> />
+	</br>
+	<div class="manual-background">      
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closeRemove">&times;</button>
+      </br>    
+      <li class="glyphicon glyphicon-remove removeImage help-text" id=<%=image%> value=<%=_id%> data-toggle="tooltip" data-placement="right" title="" data-original-title="Eliminar"> Eliminar </li>
+    </div>
+  </div>
+  </div>
+</div>

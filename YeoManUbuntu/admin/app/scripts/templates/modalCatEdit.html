@@ -1,0 +1,47 @@
+<!-- Modal -->
+<%var modalId = _id+'myModalEdit', modalName = _id+'_modalnameEdit', modalDesc= _id+'_modaldescEdit',modalSelec= _id+'_select_imageEdit',modalImg= _id+'_img_modalEdit',modalLabel= _id+'_modalimgEdit', modalForm= _id+'_buttonFile', modalErrorForm= _id+'_modalerrorInvalid', modalClose= _id+'_closeModal';%>
+<div class="modal fade" id=<%= modalId %> tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id=<%=modalClose%> >&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Editando la categoría <%= _id %></h4>
+      </div>
+      <div class="modal-body"> 
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">
+            <label>Nombre</label>            
+            <label class="must_sign">*</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <input type="text" class="modalnameEdit" value="<%=name%>" id=<%=modalName%>  maxlength="30"> </input> 
+          </div>
+        </div> 
+        <div class="row">       
+          <div class="col-xs-3 col-sm-3">
+            <label>Descripción</label>
+            <label class="must_sign">*</label>
+          </div> 
+          <div class="col-xs-4 col-sm-4">
+            <textarea rows="2" cols="50" class="modaldescEdit" id=<%=modalDesc%> maxlength="50"><%=description%></textarea> 
+          </div>
+        </div>  
+        <label>Imagen</label>
+        </br>
+        <form class=<%= modalForm %>
+          enctype="multipart/form-data"
+          method="post">
+          <input class="select_imageEdit" type="file" name="image" accept="image/*" id= <%=modalSelec%>>
+        </form>
+        <img class="img_modalEdit" alt="image preview" id= <%=modalImg%> src=<%=image[0]%> onerror="this.src='http://localhost:9000/admin/images%2Flogorojo2.jpg'"/>
+        <textarea type="text" class="modalimgEdit hidden" id= <%= modalLabel %>><%=decodeURIComponent(image)%></textarea>  
+        </br>  
+      <label class="must_sign">* Campos Requerídos</label> 
+      <div class="modal-footer">        
+        <label id=<%= modalErrorForm %> class= "hidden alert alert-danger errorMsg">Datos Invalidos, favor revisar la información ingresada</label> 
+        <button type="button" class="btn btn-default closeModal" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary editModalCat" value=<%=_id%> id=<%=modalForm%>>Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>

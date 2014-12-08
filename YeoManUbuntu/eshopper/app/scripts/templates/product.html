@@ -1,0 +1,65 @@
+<div class="col-sm-9 padding-right">
+	<div class="features_items"><!--features_items-->
+		<h2 class="title text-center"><%=models[0].attributes.name%></h2>
+		<div class="row">
+			<div class="col-sm-6 text-center">
+				<div class="product-image-wrapper">
+					<img id="product-image" src=<%='http://localhost:9000/admin/'+models[0].attributes.image[0]%> onerror="this.src='http://localhost:9000/admin/images%2Flogorojo2.jpg'" alt="" />
+				</div>
+				<%_.each(models[0].attributes.image, function(i) {%> 
+					<img class="small-image"src=<%='http://localhost:9000/admin/'+i%> onerror="this.src='http://localhost:9000/admin/images%2Flogorojo2.jpg'" alt="" />
+				<% }); %>
+				</br></br>
+				<h2 class="subtitle inline">Precio: <h4 class="inline">$<%=models[0].attributes.price%></h4></h2>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<%if(models[0].attributes.quantity > 1){%> 
+					<h2 class="subtitle inline">Cantidad: </h2>
+					<select name="select" class="inline quantitySelect">
+						<%for(i = 1; i <= models[0].attributes.quantity; i++){%> 
+					  		<option value=<%=i%>><%=i%></option> 
+					  	<%}%> 
+					</select>
+				<% }; %>
+				</br>
+				<li class="btn btn-default add-to-cart" value=<%=models[0].attributes._id%>><i class="fa fa-shopping-cart"></i>Añadir al Carrito</li>
+				</br>
+				<label id=<%="msgAdded_" + models[0].attributes._id%> class= "hidden alert alert-success">Ítem agregado satisfactoriamente.</label> 
+			</div>
+			<div class="col-sm-6">				
+				<h2 class="subtitle text-left">Descripción: <h4><%=models[0].attributes.description%></h4></h2>
+				</br>
+				<h2 class="subtitle text-left">Categorías:</h2>
+				<%_.each(Category.models, function(i) {
+					if (_.indexOf(models[0].attributes.category, i.attributes._id) != -1){%> 
+							<h4><%=i.attributes.name%></h4>
+				<% }}); %>
+				</br>
+				<h2 class="subtitle text-left">Palabras Claves:</h2>
+				<%_.each(models[0].attributes.keyword, function(i) {%>
+					<h4><%=i%></h4>
+				<% }); %>
+				</br>
+				<h2 class="subtitle text-left">Artesanos:</h2>
+				<%_.each(Craftsman.models, function(i) {
+					if (_.indexOf(models[0].attributes.craftsman, i.attributes._id) != -1){%> 
+							<h4><%=i.attributes.name%></h4>
+				<% }}); %>
+				</br>
+				<h2 class="subtitle text-left">Materiales:</h2>
+				<%_.each(Material.models, function(i) {
+					if (_.indexOf(models[0].attributes.material, i.attributes._id) != -1){%> 
+							<h4><%=i.attributes.name%></h4>
+				<% }}); %>
+			</div>
+		</div>
+	</div><!--features_items-->
+</div>
+
+<script type="text/javascript">
+  // When the document is ready
+  $(document).ready(function () {
+      
+      $('.glyphicon-info-sign').tooltip({placement: 'top'});
+  
+  });
+</script>

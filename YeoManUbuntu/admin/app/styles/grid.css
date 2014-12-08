@@ -1,0 +1,23 @@
+
+
+h4 {
+  margin-top: 25px;
+}
+.row {
+  margin-bottom: 20px;
+}
+.row .row {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+[class*="grid-"] {
+  background-color: #C1D6E8;
+  border: 2px solid #001773;
+  height: 125px;
+}
+
+hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+

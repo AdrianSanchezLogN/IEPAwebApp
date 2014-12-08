@@ -1,0 +1,31 @@
+{
+  "name": "fs",
+  "main": "dist/fs.js",
+  "version": "0.0.2",
+  "homepage": "https://github.com/matthewp/fs",
+  "authors": [
+    "Matthew Phillips <matthew@matthewphillips.info>"
+  ],
+  "description": "File system abstraction layer for the browser",
+  "keywords": [
+    "indexeddb",
+    "filesystem"
+  ],
+  "license": "Apache 2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.2",
+    "commit": "ce25011abb4d9bb01adc7b9b70c7e0625c57a0fc"
+  },
+  "_source": "git://github.com/matthewp/fs.git",
+  "_target": "*",
+  "_originalSource": "fs"
+}

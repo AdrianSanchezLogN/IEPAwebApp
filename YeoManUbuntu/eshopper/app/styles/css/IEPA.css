@@ -1,0 +1,161 @@
+/* CSS IEPA */
+
+.footer {
+	text-align: center;
+	padding: 30px 0;
+	margin-top: 70px;
+	margin-left: 10%;
+	margin-right: 10%;
+	border-top: 1px solid #e5e5e5;
+	background-color: #f5f5f5;
+}
+
+.dropdown_menu {
+	cursor: default;
+}
+
+.category-products {
+	background-color: #428bca;
+}
+
+.category-products .panel{
+	background-color: #428bca;
+}
+
+.category-products .panel-default .panel-heading {
+	background-color: #428bca;
+}
+
+.category-products .panel-default .panel-heading .panel-title a {
+	color: white;
+	cursor: default;
+}
+
+.header-bottom {
+	background-color: #428bca;
+}
+
+.mainmenu ul li a {
+	color: white;
+}
+
+.glyphicon_products {
+	color: white;
+	font-size: 25px;
+	top: -20px;
+	cursor: pointer;
+}
+
+#product-image{
+	max-width: 80%;
+	height: 250px;
+}
+.small-image{
+	width: 20%;
+	height: 20%;	
+}
+
+.left-sidebar {
+	margin-top: 30px;
+}
+
+.search_sidebar {
+	width: 100%;
+	background: #F0F0E9;
+	border: medium none;
+	color: #B2B2B2;
+	font-family: 'roboto';
+	font-size: 12px;
+	font-weight: 300;
+	height: 35px;
+	outline: medium none;
+	padding-left: 4px;
+	background-repeat: no-repeat;
+	background-position: 170px;
+}
+
+.search_sidebar input {
+	background: #F0F0E9;
+	border: medium none;
+	color: #B2B2B2;
+	font-family: 'roboto';
+	font-size: 14px;
+	font-weight: 300;
+	height: 35px;
+	outline: medium none;
+	padding-left: 4px;
+	width: 90%;
+}
+
+.search_sidebar .glyphicon {
+	padding-right: 20px;
+	top: 10px;
+	cursor: default;
+}
+
+h2.subtitle{
+	color: #A50000;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	margin: 0;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.addMsg1{
+	width: 99%;
+}
+
+.inline{
+	display: inline;
+}
+
+.quantitySelect{
+	width: 10%;
+}
+
+.must_sign {
+  color:red;
+}
+
+.modal-signIn{
+	width: 490px;
+}
+
+.modalpadding{
+	padding-left: 0px;
+}
+
+.modal-body {
+	padding-top: 10px;
+}
+
+.closeModal {
+	margin-top: 16px;
+}
+
+#main {
+	margin-top: 9px;
+}
+
+#checkall-button {
+	margin-right: 5%;
+	font-size: 120%;
+	color: #A50000;
+	cursor: pointer;
+	height: 20px;
+}
+
+#uncheckall-button {
+	margin-right: 5%;
+	font-size: 120%;
+	color: #A50000;
+	cursor: pointer;
+	height: 20px;
+}
+
+#cart_text {
+	font-size: 110%;
+	color: #428bca;
+}

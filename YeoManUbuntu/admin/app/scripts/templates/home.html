@@ -1,0 +1,95 @@
+<div id="home_div">
+	<div class="row">
+	  	<div class="col-md-8"> 
+			</br>
+			<h3> Bienvenido al Admin Tool, <%= data %></h3>
+			</br>  
+			<h4> Seleccione la opción a administrar </h4>
+			</br> 
+		</div>
+		<div class="col-md-2"> 
+		    </br>
+		    <label class="user_help" data-toggle="modal" data-target="#helpModal">Ayuda</label>
+		    <span class="glyphicon glyphicon-question-sign user_help"></span>    
+		    <span class="hidden" id="helpButton_1" data-toggle="modal" data-target="#helpModal_1"></span>
+		    <span class="hidden" id="helpButton_2" data-toggle="modal" data-target="#helpModal_2"></span>
+		  </div>
+	</div>
+
+<div style="text-align:center">
+	<label id="userinsertMsg" class= "hidden alert alert-success errorMsg3" >Usuario Ingresado Correctamente</label> 
+	<label id="comminsertMsg" class= "hidden alert alert-success errorMsg3" >Comunidad Ingresada Correctamente</label> 
+	<label id="crafinsertMsg" class= "hidden alert alert-success errorMsg3" >Artesano Ingresado Correctamente</label> 
+	<label id="cateinsertMsg" class= "hidden alert alert-success errorMsg3" >Categoría Ingresada Correctamente</label> 
+	<label id="mateinsertMsg" class= "hidden alert alert-success errorMsg3" >Material Ingresado Correctamente</label> 
+	<label id="prodinsertMsg" class= "hidden alert alert-success errorMsg3" >Producto Ingresado Correctamente</label> 
+	<label id="newsinsertMsg" class= "hidden alert alert-success errorMsg3" >Noticia Ingresada Correctamente</label> 
+
+	<label id="userupdateMsg" class= "hidden alert alert-success errorMsg3" >Usuario Modificado Correctamente</label> 
+	<label id="commupdateMsg" class= "hidden alert alert-success errorMsg3" >Comunidad Modificada Correctamente</label> 
+	<label id="crafupdateMsg" class= "hidden alert alert-success errorMsg3" >Artesano Modificado Correctamente</label> 
+	<label id="cateupdateMsg" class= "hidden alert alert-success errorMsg3" >Categoría Modificada Correctamente</label> 
+	<label id="mateupdateMsg" class= "hidden alert alert-success errorMsg3" >Material Modificado Correctamente</label> 
+	<label id="produpdateMsg" class= "hidden alert alert-success errorMsg3" >Producto Modificado Correctamente</label> 
+	<label id="newsupdateMsg" class= "hidden alert alert-success errorMsg3" >Noticia Modificada Correctamente</label> 
+
+	<label id="userdeleteMsg" class= "hidden alert alert-success errorMsg3" >Usuario Eliminado Correctamente</label> 
+	<label id="commdeleteMsg" class= "hidden alert alert-success errorMsg3" >Comunidad Eliminada Correctamente</label> 
+	<label id="crafdeleteMsg" class= "hidden alert alert-success errorMsg3" >Artesano Eliminado Correctamente</label> 
+	<label id="catedeleteMsg" class= "hidden alert alert-success errorMsg3" >Categoría Eliminada Correctamente</label> 
+	<label id="matedeleteMsg" class= "hidden alert alert-success errorMsg3" >Material Eliminado Correctamente</label> 
+	<label id="proddeleteMsg" class= "hidden alert alert-success errorMsg3" >Producto Eliminado Correctamente</label> 
+	<label id="newsdeleteMsg" class= "hidden alert alert-success errorMsg3" >Noticia Eliminada Correctamente</label> 
+
+	<label id="commerro1Msg" class= "hidden alert alert-danger errorMsg3" >Al Menos Un Artesano Pertenece a esta Comunidad</label> 
+	<label id="craferro1Msg" class= "hidden alert alert-danger errorMsg3" >Al Menos Un Producto Pertenece solo a este Artesano</label> 
+	<label id="cateerro1Msg" class= "hidden alert alert-danger errorMsg3" >Al Menos Un Producto Pertenece solo a esta Categoría</label> 
+	<label id="mateerro1Msg" class= "hidden alert alert-danger errorMsg3" >Al Menos Un Producto Contiene sola esea Material</label> 
+</div> 
+</div>
+
+<div class="modal fade" id="helpModal_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="text-align: center;">
+  	<div>
+        <span class="img_modalImage img_manualImage_Home_1" id="img_manual_1" src='' onerror='http://localhost:9000/admin/images%2Flogorojo2.jpg'/>
+      </br>
+    </div>
+    </br>
+    <div class="manual-background">      
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closeHelp">&times;</button>
+      </br>    
+      <label class="help-text">Bienvenido al Home del Administrador de Contenido. Seleccione la opción a administrar.</label>
+      </br>
+      <li class="help-button current-help 1 manualMain" value=1>1</li>
+      <li class="help-button 2 manualMain" value=2>2</li>
+    </div>
+  </div>
+</div> 
+
+<div class="modal fade" id="helpModal_2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="text-align: center;">
+    <span class="img_modalImage img_manualImage_Options_1" id="img_manual_2" src='' onerror='http://localhost:9000/admin/images%2Flogorojo2.jpg'/>
+    </br>
+    <div class="manual-background">      
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closeHelp">&times;</button>
+      </br>    
+      <label class="help-text help-text_2">Ha seleccionado un módulo para administrar. Existen dos opciones principales.</label>
+      </br>
+      <li class="help-button current-help 1 manualHome" value=1>1</li>
+      <li class="help-button 2 manualHome" value=2>2</li>
+      <li class="help-button 3 manualHome" value=3>3</li>
+      <li class="help-button 4 manualHome" value=4>4</li>
+      <li class="help-button 5 manualHome" value=5>5</li>
+      <li class="help-button 6 manualHome" value=6>6</li>
+      <li class="help-button 7 manualHome" value=7>7</li>
+      <li class="help-button 8 manualHome" value=8>8</li>
+      <li class="help-button 9 manualHome" value=9>9</li>
+      <li class="help-button 10 manualHome" value=10>10</li>
+      <li class="help-button 11 manualHome" value=11>11</li>
+      <li class="help-button 12 manualHome" value=12>12</li>
+      <li class="help-button 13 manualHome" value=13>13</li>
+    </div>
+  </div>
+</div>  
+
+

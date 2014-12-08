@@ -1,0 +1,353 @@
+/*   COLORES LOGO IEPA
+
+Rojo/Vino : #AA1F24;
+Celeste: #AAF0FC;
+Azul: #307698;
+Blanco: #EEFAF8;
+Verde: #7F933C;
+Crema: #FFE9C9;
+*/
+
+.navbar .navbar-nav .navbar-group-item.active {
+  color: white;
+  font-weight: bolder;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 70px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}
+
+.prev_img {
+  max-width: 60px;
+  max-height: 50px;
+}
+
+.prev_img_2 {
+  max-width: 120px;
+  max-height: 75px;
+}
+
+.img_modal {  
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.img_modalEdit {  
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.img_modalImage { 
+  max-width: 800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-fixed-top {
+  z-index: 10000002;
+}
+
+.modal {
+  padding-top: 100px;
+  z-index: 10000003;
+}
+
+.modal-image {
+  text-align: center;
+}
+
+.errorMsg{
+  width: 400px;
+  font-size: 12px;
+  padding: 0;
+  text-align: center;
+}
+
+.errorMsg2{
+  width: 300px;
+  font-size: 12px;
+  padding: 0;
+  text-align: center;
+}
+
+.errorMsg3{
+  width: 350px;
+  font-size: 16px;
+  padding: 0;
+  text-align: center;
+}
+
+.check_static {
+  width: 18px;
+  height: 18px;
+}
+
+textarea {
+  max-width: 250px;
+  max-height: 40px;
+}
+
+.forget {
+  color: #427fed;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  direction: ltr;
+}
+
+.glyphicon {
+  cursor: pointer;
+  color: #428bca;
+}
+
+.must_sign {
+  color:red;
+}
+
+.user_help {
+  color:#428bca;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.spinner {
+  display: inline-block;
+  opacity: 0;
+  max-width: 0;
+  -webkit-transition: opacity 0.25s, max-width 0.45s; 
+  -moz-transition: opacity 0.25s, max-width 0.45s;
+  -o-transition: opacity 0.25s, max-width 0.45s;
+  transition: opacity 0.25s, max-width 0.45s; /* Duration fixed since we animate additional hidden width */
+}
+
+.has-spinner.active {
+  cursor:progress;
+}
+
+.has-spinner.active .spinner {
+  opacity: 1;
+  max-width: 50px; /* More than it will ever come, notice that this affects on animation duration */
+}
+
+.help-button {
+  color: white;
+  font-size: 20px;  
+  cursor: pointer;
+  padding: 5px;
+  margin-top: 10px;
+  display: inline;
+  font-style: oblique;
+  font-weight: 500;
+}
+
+.current-help {  
+  color: #428bca;
+  cursor: default;
+  font-size: 25px;
+}
+
+
+#google_translate {
+  float: right;
+  padding-bottom: 10px;
+}
+
+.delete {
+  display: inline;
+}
+
+/*Classes for the Manual Images */
+
+.help-text {
+color: white;
+cursor: default;
+font-size: 20px;
+}
+
+.manual-background {
+  background-image: linear-gradient(to bottom, #428BCA 0%, #222 180%);
+  background-image: -webkit-linear-gradient(top,#428bca 0%,#222 180%%);
+  background-repeat: repeat-x;
+  background-repeat: repeat-x;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.img_modalImage {
+  width: 100%;
+  height: 100%;
+  transition:all 2s ease;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* Limpiar lineas causadas por el width */
+}
+
+/*Login*/
+.img_manualImage_Login_1 {  
+    width: 360px;
+    height: 350px;
+    background: url(/admin/manual_images/Login.png) no-repeat -10px 0;
+    display:inline-block;
+}
+
+.img_manualImage_Login_2 {  
+  width: 360px;
+  height: 350px;
+  background: url(/admin/manual_images/Login.png) no-repeat -355px -1px;
+  display:inline-block;
+}
+
+.img_manualImage_Login_3 {
+  width: 360px;
+  height: 350px;
+  background: url(/admin/manual_images/Login.png) no-repeat -691px -2px;
+  display:inline-block;
+}
+
+.img_manualImage_Login_4 {
+  width: 490px;
+  height: 280px;
+  background: url(/admin/manual_images/Login.png) no-repeat -10px -370px;
+  display:inline-block;
+}
+
+.img_manualImage_Login_5 {
+  width: 490px;
+  height: 280px;
+  background: url(/admin/manual_images/Login.png) no-repeat -520px -370px;
+  display:inline-block;
+}
+
+.img_manualImage_Login_6 {
+  width: 360px;
+  height: 350px;
+  background: url(/admin/manual_images/Login.png) no-repeat -1059px -0px;
+  display:inline-block;
+}
+
+.img_manualImage_Login_7 {
+  width: 360px;
+  height: 350px;
+  background: url(/admin/manual_images/Login.png) no-repeat -1060px -348px;
+  display:inline-block;
+}
+
+/*Home*/
+.img_manualImage_Home_1 {
+  width: 690px;
+  height: 85px;
+  background: url(/admin/manual_images/Home.png) -10px 0;
+  margin-left: -80px;
+}
+
+.img_manualImage_Home_2 {
+  width: 690px;
+  height: 85px;
+  background: url(/admin/manual_images/Home.png) -10px -79px;
+  margin-left: -80px;
+}
+
+/*Options*/
+.img_manualImage_Options_1 {
+  width: 300px;
+  height: 150px;
+  background: url(/admin/manual_images/Options.png) +702px -10px;
+}
+
+.img_manualImage_Options_2 {
+  width: 815px;
+  height: 400px;
+  background: url(/admin/manual_images/Options.png) -30px -1px;
+  margin-left: -135px;
+  max-width: none;
+}
+
+.img_manualImage_Options_3 {
+  width: 650px;
+  height: 60px;
+  background: url(/admin/manual_images/Options.png) +690px -150px;
+  margin-left: -55px;
+}
+
+.img_manualImage_Options_4 {
+  width: 650px;
+  height: 60px;
+  background: url(/admin/manual_images/Options.png) +690px -210px;
+  margin-left: -55px;
+}
+
+.img_manualImage_Options_5 {
+  width: 815px;
+  height: 200px;
+  background: url(/admin/manual_images/Options.png) -12px -710px;
+  margin-left: -135px;
+  max-width: none;
+}
+
+.img_manualImage_Options_6 {
+  width: 815px;
+  height: 320px;
+  background: url(/admin/manual_images/Options.png) -12px -400px;
+  margin-left: -135px;
+  max-width: none;
+}
+
+.img_manualImage_Options_7 {
+  width: 650px;
+  height: 110px;
+  background: url(/admin/manual_images/Options.png) +690px -270px;
+  margin-left: -55px;
+}
+
+.img_manualImage_Options_8 {
+  width: 650px;
+  height: 110px;
+  background: url(/admin/manual_images/Options.png) +690px -380px;
+  margin-left: -55px;
+}
+
+.img_manualImage_Options_9 {
+  width: 500px;
+  height: 360px;
+  background: url(/admin/manual_images/Options.png) +1195px -5px;
+}
+
+.img_manualImage_Options_10 {
+  width: 500px;
+  height: 610px;
+  background: url(/admin/manual_images/Options.png) +1195px -370px;
+}
+
+.img_manualImage_Options_11 {
+  width: 345px;
+  height: 55px;
+  background: url(/admin/manual_images/Options.png) +670px -525px;
+}
+
+.img_manualImage_Options_12 {
+  width: 345px;
+  height: 55px;
+  background: url(/admin/manual_images/Options.png) +665px -615px;
+}
+
+.img_manualImage_Options_13 {
+  width: 345px;
+  height: 55px;
+  background: url(/admin/manual_images/Options.png) +672px -693px;
+}

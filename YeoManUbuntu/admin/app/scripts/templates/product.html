@@ -1,0 +1,113 @@
+<div id="prod_div">       
+    <div class="row">
+    	<div class="col-md-2 grid-md-2"> 
+            <strong>ID</strong>
+            </br>
+            </br> 
+    		<%=_id%>
+    	</div>
+    	<div class="col-md-2 grid-md-2">
+            <strong>Nombre</strong>
+            </br>
+            </br> 
+    		<p><%=name%></p>
+    	</div>        
+        <div class="col-md-3 grid-md-3">
+            <strong>Descripción</strong>
+            </br>
+            </br> 
+            <p><%=description%></p>
+        </div>
+        <div class="col-md-5 grid-md-5"> 
+            <strong>Imagen(es)</strong>
+            </br>  
+            <% _.each(image, function(i) {%>    
+                <img class="prev_img" src=<%=i%> alt="image preview" onerror="this.src='http://localhost:9000/admin/images%2Flogorojo2.jpg'"value=<%=_id%> data-toggle="modal" <%var modalImage = '#'+decodeURIComponent(i).split('/')[1].split('.')[0].replace(' ','').replace(' ','')+'_myModalImage';%> data-target="<%=modalImage%>" />
+            <% }); %>
+            <form class="buttonFile hidden" id=<%=_id%>
+              enctype="multipart/form-data"
+              method="post">
+              <input class="select_image_append" id=<%=_id%> type="file" name="image" accept="image/*">
+            </form>
+            <img class="img_modal hidden" alt="image preview" />
+            <textarea type="text" class="modalimg hidden" id=<%=_id%>></textarea>
+            <li class="glyphicon glyphicon-plus add" value=<%=_id%> data-toggle="tooltip" data-placement="right" title="" data-original-title="Agregar"></li>
+    </div>
+        <div class="col-md-4 grid-md-4"> 
+            <strong>Categoría(s)</strong>
+            </br>  
+            </br>               
+            <% _.each(category, function(i) {%>  
+                <% _.each(categoriesCollection.models, function(e) {;%>   
+                    <%if(i == e.attributes._id){ %>
+                        <%=e.attributes.name%> 
+                    <%} }); %>                  
+            <% }); %>
+        </div>
+        <div class="col-md-4 grid-md-4"> 
+            <strong>Artesano(s)</strong>
+            </br>  
+            </br>  
+            <% _.each(craftsman, function(i) {%>  
+                <% _.each(craftsmanCollection.models, function(e) {;%>   
+                    <%if(i == e.attributes._id){ %>
+                        <%=e.attributes.name%> 
+                    <%} }); %>                  
+            <% }); %> 
+        </div>
+        <div class="col-md-4 grid-md-4"> 
+            <strong>Palabra(s) Clave(s)</strong>
+            </br>  
+            </br>   
+            <% _.each(keyword, function(i) {%>    
+                <%=i%> 
+            <% }); %>
+        </div>
+        <div class="col-md-3 grid-md-3"> 
+            <strong>Material(es)</strong>
+            </br>  
+            </br>  
+            <% _.each(material, function(i) {%>  
+                <% _.each(materialCollection.models, function(e) {;%>   
+                    <%if(i == e.attributes._id){ %>
+                        <%=e.attributes.name%> 
+                    <%} }); %>                  
+            <% }); %>  
+        </div>
+        <div class="col-md-2 grid-md-2"> 
+            <strong>Precio</strong>
+            </br>  
+            </br>   
+            <p><%=price%><p/>
+        </div>
+        <div class="col-md-3 grid-md-3"> 
+            <strong>Cantidad</strong>
+            </br>  
+            </br>   
+            <p><%=quantity%><p/>
+        </div>
+    	<div class="col-md-2 grid-md-2">
+            <strong>Editar</strong>
+            </br>
+            </br>
+            <span type="button" class="edit" value=<%=_id%> data-toggle="modal" <%var modalId = '#'+_id+'myModalEdit';%> data-target=<%=modalId%>><a class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="right" title="" data-original-title="Editar"></a> </span>
+    		
+    	</div>
+    	<div class="col-md-2 grid-md-2">
+            <strong>Eliminar</strong>
+            </br>
+            </br> 
+    		<li type="button" class="delete" value=<%=_id%>><a class="glyphicon glyphicon-remove" data-toggle="tooltip" data-placement="right" title="" data-original-title="Eliminar"></a></li>
+    	</div>			
+	  </div><!--/row-->  
+</div>
+<script type="text/javascript">
+  // When the document is ready
+  $(document).ready(function () {
+      
+      $('.glyphicon-plus').tooltip({placement: 'right'});
+      $('.glyphicon-pencil').tooltip({placement: 'right'});
+      $('.glyphicon-remove').tooltip({placement: 'right'});
+  
+  });
+</script>

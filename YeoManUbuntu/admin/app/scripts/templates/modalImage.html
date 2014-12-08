@@ -1,0 +1,7 @@
+<!-- Modal -->
+<%var modalId = _id+'myModalImage',modalSelec= _id+'_select_imageEdit',modalImg= _id+'_img_modalEdit',modalLabel= _id+'_modalimgEdit', modalClose= _id+'_closeModal';%>
+<div class="modal fade" id=<%= modalId %> tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-image">
+    <img class="img_modalImage" alt="image preview" id= <%=modalImg%> onerror="this.src='http://localhost:9000/admin/images%2Flogorojo2.jpg'" src=<%=image[0]%> />
+  </div>
+</div>
