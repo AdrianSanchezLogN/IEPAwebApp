@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>co.logn</groupId>
+    <artifactId>amc</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>amc</name>
+    <url>http://maven.apache.org</url>
+    <description>Main pom</description>
+
+
+    <developers>
+        <developer>
+            <id>diego.gamboa</id>
+            <name>Diego Gamboa</name>
+            <email>diego@lognllc.com</email>
+            <organization>Lognllc</organization>
+            <organizationUrl>http://www.lognllc.com</organizationUrl>
+            <roles>
+                <role>team-lead</role>
+                <role>sr developer</role>
+            </roles>
+            <timezone>-6</timezone>
+        </developer>
+
+        <developer>
+            <id>cristian.sanchez</id>
+            <name>Cristian Sanchez</name>
+            <email>cristiansanchez.logn@gmail.com</email>
+            <organization>Lognllc</organization>
+            <organizationUrl>http://www.lognllc.com</organizationUrl>
+            <roles>
+                <role>jr developer</role>
+            </roles>
+            <timezone>-6</timezone>
+        </developer>
+
+    </developers>
+
+
+    <repositories>
+      <repository>
+        <id>central</id>
+        <name>Maven Repository Switchboard</name>
+        <layout>default</layout>
+        <url>http://repo1.maven.org/maven2</url>
+      </repository>
+    </repositories>
+
+    <properties>
+        <spring.version>3.0.6.RELEASE</spring.version>
+        <hibernate.version>3.5.6-Final</hibernate.version>
+        <jersey-version>1.18</jersey-version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.hamcrest</groupId>
+                    <artifactId>hamcrest-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.codehaus.jettison</groupId>
+            <artifactId>jettison</artifactId>
+            <version>1.3.4</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>stax</groupId>
+                    <artifactId>stax-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+    </dependencies>
+
+    <modules>
+        <module>amc-core</module>
+        <module>amc-webservice</module>
+    </modules>
+
+    <build>
+        <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>2.4</version>
+            <configuration>
+                <source>1.7</source>
+                <target>1.7</target>
+            </configuration>
+        </plugin>
+        </plugins>
+        <finalName>amc</finalName>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+
+
+    </build>
+
+</project>

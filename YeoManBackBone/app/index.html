@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>YeoManBackBone</title>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <div id="header">
+            Acá va el header
+        </div>
+        <div id="menu_navbar">
+            Acá va el menú
+        </div>
+        <div id="cate_navbar">
+        </div>
+        <div id="search_navbar">
+            Acá va el search
+            <div id="login" class="login">
+               <button onclick="window.location.href='#login'">Login</button>
+            </div>
+        </div>
+        <div id="content">
+            Acá va el contenido principal
+        </div>
+        <div id="news_navbar">
+            Acá van las noticias
+        </div>
+        <div id="footer">
+            Acá va el footer
+        </div>
+        <!-- build:js scripts/main.js -->
+        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+        <script type="text/template" src="scripts/templates/login.html"></script>
+        <script type="text/template" src="scripts/templates/categories_menu.html"></script>
+        <!-- endbuild -->
+</body>
+</html>

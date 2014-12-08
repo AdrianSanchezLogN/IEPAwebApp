@@ -1,0 +1,59 @@
+Insertar usuario -> 
+	Obtener prox id de usuario
+	Incrementar id usuario
+	Obtener prox id de email (creo q es el mismo al del usuario)
+	Incrementar id email
+	Insertar email
+	Insertar usuario
+
+Insertar categoría ->
+	Obtener prox id de categoría
+	Incrementar id categoría
+	Insertar categoría
+
+Eliminar categoría ->
+	Pull en user + recentCategories
+	Pull en product + category
+	Eliminar categoría
+
+Insertar producto ->
+	Obtener prox id de producto
+	Incrementar id producto
+	Insertar producto
+	Dependiendo del JSON que se le pase habría q hacer push en category, material, craftsman
+
+Insertar material ->
+	Obtener prox id de material
+	Incrementar id material
+	Insertar material
+
+Eliminar material ->
+	Pull en product + material (En caso de ser el único material se elimina el producto?)
+	Eliminar material
+
+Insertar artesano ->
+	Obtener prox id de artesano
+	Incrementar id artesano
+	Insertar artesano
+
+Eliminar artesano ->
+	Pull en product + craftsman (En caso de ser el único artesano se elimina el producto?)
+	Eliminar artesano
+
+Insertar comunidad ->
+	Obtener prox id de comunidad
+	Incrementar id comunidad
+	Insertar comunidad
+
+Eliminar comunidad ->
+	Pull en craftsman + community (se elimina el artesano?)
+	Eliminar comunidad
+
+Compra ->
+	Obtener prox id de factura
+	Insertar factura
+	(CICLO
+	Obtener prox id de linea
+	Insertar linea
+	Actualizar monto en la factura
+	Actualizar cantidad de productos en stock)

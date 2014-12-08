@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Home</title>
+        <link href="css/styles.css" rel="stylesheet" type="text/css"> 
+    </head>
+    <body>
+        <div id="header">
+            Acá va el header
+        </div>
+        <div id="menu_navbar">
+            Acá va el menú
+        </div>
+        <div id="cate_navbar">
+        </div>
+        <div id="search_navbar">
+            Acá va el search
+            <div id="login" class="login">
+               <button onclick="window.location.href='#login'">Login</button>
+        </div>
+        </div>
+        <div id="content">
+            Acá va el contenido principal
+        </div>
+        <div id="news_navbar">
+            Acá van las noticias
+        </div>
+        <div id="footer">
+            Acá va el footer
+        </div>
+        <script type="text/template" id="catemenuTemplate">
+            <div>
+                <% _.each(target, function(i) {%>       
+                        </br>
+                            <a href=<%=i["name"] + ".html"%>><%=i["name"]%></a>
+                        </br>   
+                <% }); %>
+            </div>
+        </script>
+        <script id="loginTemplate" type="text/template">
+            <label> Email </label>
+            </br>
+            <input type="text" id="email" value="">
+            </br>
+            </br>
+            <label> Password </label>
+            </br>
+            <input type="password" id="pass" value="">
+            </br>
+            </br>
+            <button class="login_button">Log In</button>
+        </script>
+        <script src="js/lib/jquery-1.11.0.min.js"></script>
+        <script src="js/lib/underscore-min.js"></script>
+        <script src="js/lib/backbone-min.js"></script>
+        <script src="js/lib/amplify.min.js"></script>
+        <script src="js/models/home.js"></script>
+        <script src="js/views/login.js"></script>
+        <script src="js/views/home.js"></script>
+        <script src="js/views/cateMenu.js"></script>
+        <script src="js/routers/router.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

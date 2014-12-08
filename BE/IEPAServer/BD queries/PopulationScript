@@ -1,0 +1,71 @@
+//Consultas para la base de datos
+
+
+
+//Inserciónes
+
+//ID's
+db.id.insert({user:1, category:1, community:1, craftsman:1, material:1, product:1, bill:1, line:1, email:1})
+
+//Email
+db.email({_id:1, email:"adriansanchez.logn@gmail.com"})
+
+//Usuario
+db.user.insert({_id:1, name:"Adrián Sánchez", password:"adsanchez", email:1, physicalAddress:"San Diego, Cartago", registrationDate: Date(), birthday: new Date("1991 12 1"), country:"C.R.", recentCategories:[], sessionDate: Date(), sessionValue:""})
+
+//Categoria
+db.category.insert({_id:1, name:"Masks", description:"Native handmade masks"})
+db.category.insert({_id:2, name:"Jewerly", description:"Native handmade jewerly"})
+db.category.insert({_id:3, name:"Clothes", description:"Native handmade clothes"})
+
+//Community
+db.community.insert({_id:1, name:"Cocles"})
+
+//Artesano
+db.craftsman.insert({_id:1, name:"Gretel", image:"", description:"", community:[1], email:"gretel.corrales@gmail.com"})
+
+//Material
+db.material.insert({_id:1, type:"Wood"})
+
+//Product
+db.product.insert({_id:1, category:[1], material:[1], craftsman:[1], name:"Bird Mask", description:"Handmade mask like a parrot", quantity:2, price:20, image:"", keyword: []})
+
+db.product.insert({_id:2, category:[1], material:[1], craftsman:[1], name:"Lizard Mask", description:"Handmade mask inspired in a lizard legend", quantity:3, price:30, image:"", keyword:["Handmade", "Mask", "Lizard"]})
+
+//Updates
+
+//Update seteando un campo totalmente
+
+db.user.update({_id: 1}, {$set:{recentCategories: [1]}})
+
+db.user.update({name:"Adrián Sánchez"}, {$set:{recentCategories: [1)]}})
+
+
+//Update incrementado el valor de un entero 2396
+
+db.product.update({_id:1}, {$inc: {quantity:2}})
+
+
+//Simulando compras de articulos
+
+db.bill.insert({_id:1, costumer:1, total:0, date:Date()})
+
+db.line.insert({_id:1, relatedBill:1, product:1, quantity:1})
+
+db.bill.update({_id:1}, {$inc: {total:20}})
+
+db.product.update({_id:1}, {$inc: {quantity:-1}})
+
+db.bill.insert({_id:2, costumer:1, total:0, date:Date()})
+
+db.line.insert({_id:2, relatedBill:2, product:1, quantity:2})
+
+db.bill.update({_id:2}, {$inc: {total:40}})
+
+db.product.update({_id:1}, {$inc: {quantity:-2}})
+
+db.line.insert({_id:3, relatedBill:2, product:2, quantity:1})
+
+db.bill.update({_id:2}, {$inc: {total:30}})
+
+db.product.update({_id:2}, {$inc: {quantity:-1}})

@@ -1,0 +1,16 @@
+sudo npm install -g yo
+sudo npm install -g generator-backbone
+mkdir Desktop/Adrian/YeoManBackBone
+cd Desktop/Adrian/YeoManBackBone
+yo backbone
+yo backbone:router router
+yo backbone:model home
+yo backbone:view home
+
+
+sudo npm install -g yo grunt-cli bower
+sudo npm install grunt-compass
+sudo npm install -g compass
+sudo npm install grunt-contrib-compass --save-dev -g
+sudo gem install compass
+grunt serve

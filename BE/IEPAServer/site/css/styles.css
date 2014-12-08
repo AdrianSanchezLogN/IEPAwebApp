@@ -1,0 +1,109 @@
+/*   COLORES LOGO IEPA
+
+Rojo/Vino : #AA1F24;
+Celeste: #AAF0FC;
+Azul: #307698;
+Blanco: #EEFAF8;
+Verde: #7F933C;
+Crema: #FFE9C9;
+*/
+#body {
+	width: 98%;
+	height: 100%;
+}
+
+#header {
+	position: absolute;
+	text-align: center;
+	border: 2px solid #AA1F24;
+	width: 98.5%;
+	height: 15%;
+}
+
+#menu_navbar {
+	position: absolute;
+	top: 20%;
+	text-align: center;
+	border: 2px solid #AAF0FC;
+	width: 98.5%;
+	height: 5%;
+}
+
+#cate_navbar {
+	position: absolute;
+	top: 30%;
+	text-align: left;
+	border: 2px solid #307698;
+	width: 20%;
+	height: 60%;
+}
+
+#search_navbar {
+	position: absolute;
+	top: 30%;
+	left: 23%;
+	text-align: left;
+	border: 2px solid #7F933C;
+	width: 76%;
+	height: 5%;
+}
+
+#search_navbar .login{
+	position: relative;
+	float: right;
+	margin-right: 2%;
+}
+
+#content {
+	position: absolute;
+	top: 38%;
+	left: 23%;
+	text-align: left;
+	border: 2px solid #FFE9C9;
+	width: 54%;
+	height: 52%;
+}
+
+#news_navbar {
+	position: absolute;
+	top: 38%;
+	left: 79%;
+	text-align: left;
+	border: 2px solid #AA1F24;
+	width: 20%;
+	height: 52%;
+}
+
+#footer {
+	position: absolute;
+	top: 93%;
+	text-align: center;
+	border: 2px solid #AAF0FC;
+	width: 98.5%;
+	height: 5%;
+}
+
+#form_services {
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 150%
+}
+
+#table_content {
+	padding: 5%;
+}
+
+#table_content th{
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 125%;
+	border: 2px solid blue;
+	width: 20%;
+}
+
+#table_content td {
+	text-align: left;
+	font-family: sans-serif;
+	font-size: 100%;
+	border: 1px solid black;
+}
